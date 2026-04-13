@@ -1,169 +1,104 @@
-PROGRAM_TEMPLATES = [
-
-"🎾 Tournois ATP du moment : {tournaments}. En début de tournoi, les repères sur la surface et les conditions locales peuvent créer quelques surprises intéressantes.",
-
-"🎾 Les tournois en cours : {tournaments}. Les premiers tours donnent souvent de vraies indications sur la forme actuelle des joueurs.",
-
-"🎾 Focus circuit ATP : {tournaments}. La dynamique de début de semaine influence souvent la suite du tournoi.",
-
-"🎾 Journée intéressante sur le circuit : {tournaments}. Les différences de styles de jeu peuvent créer des matchs plus serrés que prévu.",
-
-"🎾 Plusieurs matchs aujourd’hui sur {tournaments}. Le contexte du tournoi joue souvent un rôle plus important que le classement pur.",
-
-"🎾 Le tournoi avance progressivement sur {tournaments}. Certains joueurs montent en puissance au fil des matchs.",
-
-"🎾 Programme ATP du jour : {tournaments}. L’adaptation aux conditions locales reste essentielle.",
-
-"🎾 Journée de compétition sur {tournaments}. Les premiers matchs permettent souvent d’observer les tendances de la semaine.",
-
-"🎾 Tournois ATP en cours : {tournaments}. Certains profils deviennent plus dangereux après un premier match solide.",
-
-"🎾 Le circuit continue aujourd’hui sur {tournaments}. La confiance accumulée peut influencer fortement la performance.",
-
-"🎾 Plusieurs matchs à suivre aujourd’hui sur {tournaments}. Les écarts peuvent parfois se réduire sur une surface spécifique.",
-
-"🎾 Journée ATP active sur {tournaments}. Les premiers tours offrent souvent des lectures intéressantes.",
-
-"🎾 Focus du jour sur {tournaments}. Les dynamiques récentes peuvent évoluer très rapidement.",
-
-"🎾 Le contexte du tournoi sur {tournaments} peut créer des situations inattendues.",
-
-"🎾 La semaine avance sur {tournaments}. La fatigue et l’adaptation deviennent importantes.",
-
-"🎾 Tournois ATP du moment : {tournaments}. Certains joueurs élèvent leur niveau progressivement.",
-
-"🎾 Programme chargé sur {tournaments}. Les styles de jeu opposés peuvent produire des matchs serrés.",
-
-"🎾 Sur {tournaments}, la capacité à rester constant devient essentielle.",
-
-"🎾 Tournois ATP en cours : {tournaments}. Les premières tendances commencent à apparaître.",
-
-"🎾 Journée de compétition intéressante sur {tournaments}. Les dynamiques peuvent évoluer rapidement."
-
+MATCHDAY = [
+    "🎾 Journée intéressante sur le circuit ATP avec plusieurs profils capables d’imposer leur rythme dès les premiers jeux. Les matchs du jour sont souvent les meilleurs pour observer quels joueurs entrent réellement bien dans leur semaine.",
+    "📅 Sur une journée comme aujourd’hui, les oppositions de styles sont particulièrement importantes. Quand un joueur très agressif rencontre un profil plus patient, le rythme du match peut vite devenir le facteur décisif.",
+    "🎾 Les journées de match révèlent souvent bien plus que le classement. Qualité de déplacement, lecture du service adverse et gestion des temps faibles donnent souvent une meilleure indication du vrai niveau du moment.",
+    "📊 Aujourd’hui, plusieurs matchs peuvent surtout se jouer sur l’adaptation à la surface. Les joueurs qui trouvent rapidement leur longueur de balle et leur zone de confort prennent souvent un avantage immédiat.",
+    "🎾 Une journée de tournoi se lit souvent à travers les détails : premières balles, qualité de retour, stabilité dans les rallyes et capacité à rester discipliné tactiquement quand le score se resserre.",
+    "📅 Les matchs du jour sont souvent intéressants à lire quand deux joueurs arrivent avec des dynamiques proches. Dans ce type de configuration, ce sont souvent les détails mentaux et la gestion des points importants qui tranchent.",
+    "🎾 En journée de match, le contexte compte énormément : fatigue de la semaine précédente, adaptation aux conditions du site et confiance accumulée sur les derniers matchs. C’est souvent là que se cache la vraie lecture d’une rencontre.",
+    "📊 Aujourd’hui, certaines affiches opposent des joueurs qui n’aiment pas du tout le même rythme. Quand l’un cherche à raccourcir et l’autre à allonger, le match peut rapidement sortir du scénario attendu.",
+    "🎾 Les journées de tournoi permettent souvent d’identifier les joueurs qui montent progressivement en puissance. Un premier tour moyen ne veut pas toujours dire manque de forme ; parfois, il faut juste un match pour se régler.",
+    "📅 Certains matchs du jour peuvent être plus équilibrés qu’ils n’en ont l’air. Dès que la surface réduit un peu l’impact du service, la lecture devient souvent plus tactique et plus intéressante.",
+    "🎾 Une journée comme celle-ci est souvent idéale pour observer les profils les plus solides en fond de court. Quand les échanges s’allongent, la qualité de couverture de terrain et la patience prennent beaucoup de valeur.",
+    "📊 Aujourd’hui, plusieurs joueurs doivent confirmer un bon résultat récent. Ce type de match est toujours intéressant, car il permet de voir si la confiance du moment est réellement installée ou encore fragile.",
+    "🎾 Les matchs du jour ne se résument pas aux noms affichés. La vraie différence se fait souvent sur l’intensité du premier set, la capacité à tenir sa mise en jeu sous pression et la qualité des secondes balles.",
+    "📅 Journée importante pour lire les dynamiques de tournoi. Certains joueurs arrivent frais, d’autres sortent de matchs plus longs, et cet écart de dépense physique peut vite influencer la qualité globale de la rencontre.",
+    "🎾 Les journées de match ATP sont souvent les plus révélatrices quand on regarde les ajustements entre les sets. Les joueurs qui savent corriger rapidement leur plan de jeu sont généralement ceux qui tiennent le plus longtemps dans la semaine.",
+    "📊 Aujourd’hui, les conditions peuvent favoriser les joueurs capables de répéter les efforts sans sortir de leur structure tactique. C’est souvent une qualité sous-estimée, mais très utile pour lire certaines affiches.",
+    "🎾 Une journée de tournoi se lit aussi dans l’attitude. Certains joueurs imposent immédiatement leur présence, d’autres subissent encore les conditions du jour. Cette différence se voit souvent dès les premiers jeux.",
+    "📅 Les matchs du jour peuvent offrir des scénarios très différents selon la surface et le contexte. Un favori théorique peut vite être mis sous pression s’il n’entre pas bien dans ses premiers jeux de service.",
+    "🎾 Aujourd’hui, plusieurs rencontres demandent surtout une bonne lecture du rythme. Quand deux joueurs ont des schémas de jeu opposés, la capacité à imposer sa cadence devient souvent le vrai levier du match.",
+    "📊 Les journées de match permettent souvent de repérer les profils qui prennent confiance point après point. Chez certains joueurs, il faut seulement quelques jeux bien négociés pour voir leur niveau monter nettement."
 ]
 
-FUN_FACTS = [
-
-"📊 Fun fact : sur certaines surfaces, la longueur moyenne des échanges augmente fortement, ce qui favorise les joueurs patients et solides physiquement.",
-
-"📊 Fun fact : la qualité du retour influence souvent davantage le résultat que la puissance brute du service.",
-
-"📊 Fun fact : les joueurs ayant déjà disputé plusieurs matchs sur une surface peuvent bénéficier d’un meilleur timing.",
-
-"📊 Fun fact : la fatigue accumulée pendant une semaine de tournoi peut jouer un rôle décisif.",
-
-"📊 Fun fact : deux joueurs proches au classement peuvent présenter des performances très différentes selon la surface.",
-
-"📊 Fun fact : les confrontations directes passées influencent parfois la confiance d’un joueur.",
-
-"📊 Fun fact : certains joueurs performent mieux lorsqu’ils ont déjà trouvé leur rythme dans un tournoi.",
-
-"📊 Fun fact : les conditions météo peuvent modifier la vitesse du jeu plus qu’on ne le pense.",
-
-"📊 Fun fact : la constance dans les échanges reste souvent déterminante dans les matchs serrés.",
-
-"📊 Fun fact : les premiers matchs sur une nouvelle surface demandent souvent un temps d’adaptation.",
-
-"📊 Fun fact : la confiance peut évoluer très vite après une victoire solide.",
-
-"📊 Fun fact : certains styles de jeu posent plus de difficultés à certains profils.",
-
-"📊 Fun fact : les statistiques globales ne reflètent pas toujours la forme actuelle.",
-
-"📊 Fun fact : la gestion des moments importants influence souvent l’issue d’un match.",
-
-"📊 Fun fact : certains joueurs élèvent leur niveau au fil de la semaine.",
-
-"📊 Fun fact : la récupération physique influence souvent les performances.",
-
-"📊 Fun fact : la qualité de déplacement influence beaucoup la performance sur certaines surfaces.",
-
-"📊 Fun fact : les matchs serrés se jouent souvent sur quelques points.",
-
-"📊 Fun fact : les conditions de jeu varient selon le tournoi.",
-
-"📊 Fun fact : les profils complets s’adaptent souvent mieux."
-
-]
-
-ANALYSIS = [
-
-"🎾 Analyse : les matchs les plus intéressants ne sont pas toujours ceux entre les noms les plus connus.",
-
-"🎾 Analyse : la forme récente doit toujours être remise dans son contexte.",
-
-"🎾 Analyse : les premiers tours sont souvent une question d’adaptation.",
-
-"🎾 Analyse : la qualité sur seconde balle peut être déterminante.",
-
-"🎾 Analyse : le classement ne reflète pas toujours la dynamique actuelle.",
-
-"🎾 Analyse : certains joueurs ont besoin de temps pour imposer leur rythme.",
-
-"🎾 Analyse : la confiance influence fortement la prise d’initiative.",
-
-"🎾 Analyse : les styles opposés créent souvent des matchs intéressants.",
-
-"🎾 Analyse : la discipline tactique reste essentielle.",
-
-"🎾 Analyse : les dynamiques de tournoi évoluent rapidement.",
-
-"🎾 Analyse : la gestion du rythme influence la performance.",
-
-"🎾 Analyse : la stabilité mentale reste un facteur clé.",
-
-"🎾 Analyse : les performances peuvent évoluer match après match.",
-
-"🎾 Analyse : les profils réguliers limitent souvent les erreurs.",
-
-"🎾 Analyse : certains joueurs progressent au fil du tournoi.",
-
-"🎾 Analyse : les conditions spécifiques influencent les performances.",
-
-"🎾 Analyse : les matchs serrés dépendent souvent de détails.",
-
-"🎾 Analyse : la constance reste déterminante.",
-
-"🎾 Analyse : la surface influence les stratégies.",
-
-"🎾 Analyse : la dynamique du moment reste essentielle."
-
+FACTS = [
+    "📊 Sur terre battue, la longueur moyenne des échanges augmente sensiblement par rapport aux surfaces rapides. Cela favorise généralement les joueurs patients, bien organisés en défense et capables de répéter les efforts sans se précipiter.",
+    "📊 Le pourcentage de points gagnés sur seconde balle reste l’un des indicateurs les plus utiles pour lire un match. Un joueur qui protège mal sa seconde s’expose souvent à une pression constante sur ses jeux de service.",
+    "📊 Sauver une balle de break a souvent plus d’impact qu’un simple point gagné. Dans beaucoup de matchs serrés, ce type de moment change la dynamique mentale du set et renforce la confiance au service.",
+    "📊 Les joueurs qui convertissent bien leurs balles de break ne sont pas toujours les plus puissants. Très souvent, ce sont surtout ceux qui restent les plus lucides dans les points importants et qui acceptent d’être patients.",
+    "📊 Un bon classement ne garantit jamais une entrée facile dans un tournoi. L’adaptation à la surface, aux balles et aux conditions locales peut demander un vrai temps de réglage, même chez les meilleurs profils.",
+    "📊 Les joueurs qui sortent d’une grosse semaine précédente arrivent parfois avec plus de rythme, mais aussi avec plus de fatigue accumulée. C’est un équilibre important à lire, surtout en début de tournoi.",
+    "📊 Dans les matchs serrés, la différence se fait rarement uniquement sur les coups gagnants. La gestion des secondes balles, la qualité de retour et la discipline sur les points importants pèsent souvent davantage.",
+    "📊 Certains joueurs montent réellement en puissance au fil d’un tournoi. Leur premier match sert parfois surtout à se régler, et leur niveau réel apparaît davantage à partir du deuxième ou du troisième tour.",
+    "📊 La météo influence parfois bien plus que prévu le déroulement d’un match. Température, vent et humidité modifient la vitesse de balle, la qualité du service et le confort de frappe de certains profils.",
+    "📊 Deux joueurs proches au classement peuvent pourtant être très éloignés en termes d’adaptation à une surface précise. Le contexte du tournoi compte souvent presque autant que la valeur pure du joueur.",
+    "📊 Les profils solides en retour prennent souvent plus de valeur sur les surfaces lentes. Quand ils neutralisent bien les premières frappes adverses, ils rendent beaucoup de gros serveurs moins dominants que prévu.",
+    "📊 La qualité du déplacement latéral reste l’un des éléments les plus sous-estimés dans l’analyse d’un match. Un joueur qui se replace vite peut transformer complètement la physionomie des échanges.",
+    "📊 Les matchs gagnés après avoir perdu le premier set en disent souvent beaucoup sur la solidité mentale d’un joueur. Cette capacité à ajuster et rester calme devient un vrai signal de confiance.",
+    "📊 Les longs rallyes ne favorisent pas seulement les joueurs défensifs. Ils avantagent surtout ceux qui savent garder une structure claire sans surjouer quand l’échange s’allonge.",
+    "📊 La première journée sur une nouvelle surface reste souvent piégeuse. Même un joueur en forme peut avoir besoin de plusieurs jeux avant de retrouver sa bonne longueur de balle et ses appuis habituels.",
+    "📊 Les joueurs qui lisent bien le service adverse créent souvent plus d’occasions qu’on ne le pense. La pression mise en retour use mentalement et modifie parfois tout le rapport de force du match.",
+    "📊 Tenir son service après un jeu compliqué a souvent un effet immédiat sur la confiance. Ce genre de séquence renforce la stabilité mentale et permet de jouer les jeux suivants avec plus de liberté.",
+    "📊 Plus un match promet des échanges longs, plus la patience et la discipline tactique deviennent importantes. Dans ce type de scénario, la précipitation coûte souvent plus cher que le manque d’agressivité.",
+    "📊 Certains joueurs excellent contre un type de profil précis, même quand le classement laisse penser le contraire. Les confrontations de styles restent souvent plus instructives que les statistiques globales.",
+    "📊 La fatigue visible n’est pas toujours physique. Dans certains matchs, la baisse de lucidité sur les points importants vaut presque autant qu’une baisse d’intensité pure."
 ]
 
 SURFACE = [
+    "📍 Sur terre battue, les joueurs capables de bien défendre puis de repartir vers l’avant gardent souvent un avantage important au fil du match. La surface récompense généralement davantage la construction que la précipitation.",
+    "📍 Sur surface lente, la qualité de retour et la couverture de terrain prennent souvent plus de valeur que la puissance brute. Plus les échanges s’allongent, plus la lecture tactique devient essentielle.",
+    "📍 Une surface ne se résume jamais à son nom. Vitesse réelle, type de balles, météo et rebond du court influencent énormément la façon dont un match se construit.",
+    "📍 Les surfaces plus lentes donnent souvent plus de temps pour s’organiser, mais elles exigent aussi davantage de discipline. Les joueurs qui sortent trop vite de leur plan y perdent souvent en efficacité.",
+    "📍 Sur terre battue, le lift lourd et la capacité à varier hauteur et profondeur deviennent de vrais leviers. Les joueurs qui imposent un rebond inconfortable prennent souvent l’ascendant dans la durée.",
+    "📍 Sur surface rapide, la qualité de première frappe prend naturellement plus de valeur. Mais même là, les joueurs qui lisent bien le service et contrôlent la transition défense-attaque restent très dangereux.",
+    "📍 Certaines surfaces récompensent davantage la prise d’initiative, d’autres la régularité. Comprendre ce détail aide souvent à mieux lire les matchs du jour que le simple classement ATP.",
+    "📍 Plus la surface ralentit, plus les profils solides en retour et en endurance deviennent intéressants à suivre. Le match se joue alors souvent sur la répétition des efforts plutôt que sur quelques points explosifs.",
+    "📍 La hauteur de rebond influence fortement les trajectoires utiles. Un joueur très à l’aise à hauteur d’épaule peut devenir beaucoup plus dangereux sur une surface où son lift ressort naturellement.",
+    "📍 Une surface peut transformer un rapport de force. Un joueur moyen sur dur peut devenir beaucoup plus compétitif sur terre battue s’il maîtrise mieux les longs échanges et la variation d’effets.",
+    "📍 Les surfaces lentes punissent souvent les joueurs trop linéaires. Quand le rebond varie et que le temps d’échange augmente, la capacité à s’ajuster devient plus importante que l’intensité brute.",
+    "📍 Sur certaines semaines, le court annoncé comme lent joue en réalité plus vite à cause des conditions météo. C’est pour ça que la lecture de surface doit toujours rester liée au contexte du jour.",
+    "📍 Plus la surface donne du temps, plus la qualité du replacement devient visible. Les joueurs qui se remettent vite dans l’échange tiennent généralement mieux les séquences longues.",
+    "📍 Sur terre battue, défendre une ou deux frappes de plus suffit parfois à changer complètement un point. Cette capacité à rester dans l’échange use progressivement l’adversaire.",
+    "📍 Les surfaces influencent aussi le mental. Sur un court lent, un joueur doit souvent accepter de construire plus longtemps, ce qui demande une autre patience que sur dur ou indoor.",
+    "📍 Quand la surface neutralise un peu le service, la qualité de lecture en retour devient centrale. C’est souvent là que les profils les plus complets prennent un avantage durable.",
+    "📍 Les joueurs qui savent varier hauteur, longueur et cadence exploitent souvent mieux les surfaces lentes. Ils forcent davantage l’adversaire à jouer hors de sa zone de confort.",
+    "📍 Une surface rapide peut favoriser les prises de risque, mais elle punit aussi plus vite les mauvais choix. La précision des premières frappes y devient souvent décisive.",
+    "📍 Sur surface lente, la gestion du corps compte énormément. Un joueur qui se fatigue un peu plus dans ses appuis perd vite en qualité de balle et en stabilité dans l’échange.",
+    "📍 Comprendre la surface réelle d’un tournoi reste l’un des meilleurs moyens d’éviter une lecture trop simpliste d’un match. Entre le papier et le court, l’écart est parfois bien réel."
+]
 
-"📍 Surface : certaines surfaces favorisent les joueurs patients.",
-
-"📍 Surface : la vitesse du court influence le style de jeu.",
-
-"📍 Surface : les profils complets s’adaptent mieux.",
-
-"📍 Surface : les échanges peuvent être plus longs.",
-
-"📍 Surface : la prise d’initiative varie selon la surface.",
-
-"📍 Surface : la régularité devient plus importante.",
-
-"📍 Surface : le rebond influence les trajectoires.",
-
-"📍 Surface : la qualité du déplacement reste essentielle.",
-
-"📍 Surface : les styles agressifs peuvent être plus risqués.",
-
-"📍 Surface : la surface influence la stratégie globale."
-
+ANALYSIS = [
+    "🎾 Les matchs les plus intéressants ne sont pas toujours ceux entre les noms les plus connus. Les meilleures lectures viennent souvent des rencontres où la surface et le style de jeu créent un vrai contraste.",
+    "🎾 La forme récente compte, mais elle doit toujours être remise dans son contexte. Battre un joueur fatigué ou mal à l’aise sur la surface n’a pas la même valeur qu’une vraie performance complète.",
+    "🎾 Dans beaucoup de tournois ATP, les premiers tours sont surtout une question d’adaptation. Les joueurs qui prennent vite la température du court et du rythme de jeu prennent souvent un avantage immédiat.",
+    "🎾 Dans un match équilibré, la qualité sur seconde balle devient souvent un point central. C’est souvent là que se cache une partie de la vraie lecture du match.",
+    "🎾 Certains profils ont besoin de temps pour imposer leur schéma tactique. Lorsqu’ils font face à un adversaire plus direct, le début de match peut être très différent de la fin.",
+    "🎾 Le classement reste un repère utile, mais il ne dit pas tout. Le niveau réel du moment, la confiance, la surface et la fatigue pèsent souvent plus lourd sur un match isolé.",
+    "🎾 Dans une semaine dense, les joueurs capables de rester stables mentalement sur les jeux serrés gardent souvent un avantage réel sur les profils plus irréguliers.",
+    "🎾 Certaines oppositions sont difficiles à lire uniquement avec les statistiques globales. Il faut aussi regarder comment chaque joueur gagne ses points et dans quelles conditions il devient efficace.",
+    "🎾 Plus un match promet des échanges longs, plus la patience et la discipline tactique deviennent importantes. Ce sont souvent ces détails qui décident les sets serrés.",
+    "🎾 La dynamique d’un tournoi peut changer très vite. Un joueur discret en début de semaine peut monter en puissance match après match et devenir plus dangereux qu’attendu.",
+    "🎾 Quand deux joueurs arrivent avec des dynamiques proches, le match se lit souvent dans la qualité des premières mises en jeu et la gestion des points importants, plus que dans le classement brut.",
+    "🎾 Certains joueurs donnent beaucoup de repères dans leurs premiers jeux. Dès l’entame, on peut souvent voir s’ils sont bien réglés en longueur de balle et s’ils imposent déjà leur tempo.",
+    "🎾 Les profils les plus solides ne sont pas toujours ceux qui frappent le plus fort. Très souvent, ce sont ceux qui répètent le mieux leurs schémas sans se désorganiser sous pression.",
+    "🎾 Une bonne lecture de match passe souvent par l’identification du vrai levier tactique : service, retour, rythme, couverture du terrain ou capacité à allonger. Tout ne compte pas au même niveau selon l’affiche.",
+    "🎾 Dans les matchs où le service est un peu neutralisé par la surface, la qualité de retour devient souvent le vrai centre du rapport de force. C’est là que les écarts se creusent.",
+    "🎾 Certains favoris restent vulnérables quand ils n’entrent pas vite dans le match. Un démarrage moyen sur une surface exigeante peut suffire à installer le doute plus tôt qu’on ne le pense.",
+    "🎾 Quand un joueur varie bien hauteur et profondeur, il impose souvent plus d’inconfort qu’un profil simplement agressif. Sur certaines surfaces, cette variation compte énormément.",
+    "🎾 L’analyse d’un match devient plus claire quand on regarde quels points chaque joueur cherche à éviter. Les limites d’un profil révèlent souvent davantage que ses qualités brutes.",
+    "🎾 Les joueurs qui maîtrisent le mieux les temps faibles ne dominent pas toujours visuellement, mais ce sont souvent eux qui prennent l’avantage sur la durée d’un match serré.",
+    "🎾 La lecture la plus utile n’est pas toujours de savoir qui joue le mieux aujourd’hui, mais qui impose les conditions dans lesquelles il devient le plus efficace."
 ]
 
 CTA = [
-
-"📩 Analyse complète sur Telegram : https://t.me/+4tUnDFWg4gVlM2Q0",
-
-"🎾 Mes lectures du jour : https://t.me/+4tUnDFWg4gVlM2Q0",
-
-"📊 Sélection détaillée ici : https://t.me/+4tUnDFWg4gVlM2Q0",
-
-"📲 Analyse complète disponible : https://t.me/+4tUnDFWg4gVlM2Q0",
-
-"🎾 Accès aux analyses : https://t.me/+4tUnDFWg4gVlM2Q0"
-
+    "🎾 Analyse complète des matchs ATP du jour disponible sur Telegram.\nLecture détaillée, angles intéressants et contexte du jour.\n\nhttps://t.me/+4tUnDFWg4gVlM2Q0",
+    "📊 Plusieurs rencontres présentent aujourd’hui des configurations intéressantes.\nLa lecture complète du programme est disponible sur Telegram.\n\nhttps://t.me/+4tUnDFWg4gVlM2Q0",
+    "🎾 Analyse détaillée du circuit ATP du jour disponible sur Telegram.\nSurface, dynamique, rythme et points clés à surveiller.\n\nhttps://t.me/+4tUnDFWg4gVlM2Q0",
+    "📅 Lecture complète des matchs ATP du jour disponible ici.\nAnalyse quotidienne, contexte du tournoi et angles intéressants.\n\nhttps://t.me/+4tUnDFWg4gVlM2Q0",
+    "🎾 Certaines affiches du jour demandent une lecture plus fine que le simple classement.\nAnalyse complète disponible sur Telegram.\n\nhttps://t.me/+4tUnDFWg4gVlM2Q0",
+    "📊 Le programme ATP du jour offre plusieurs spots intéressants à observer.\nDécryptage complet disponible ici.\n\nhttps://t.me/+4tUnDFWg4gVlM2Q0",
+    "🎾 Lecture quotidienne du circuit ATP : formes du moment, contexte et analyses du jour.\nDisponible sur Telegram.\n\nhttps://t.me/+4tUnDFWg4gVlM2Q0",
+    "📅 Analyse du jour disponible sur Telegram.\nMatchs intéressants, dynamiques de tournoi et lecture plus détaillée.\n\nhttps://t.me/+4tUnDFWg4gVlM2Q0",
+    "🎾 Plusieurs matchs du jour présentent de vrais contrastes de styles.\nAnalyse complète et lecture du programme sur Telegram.\n\nhttps://t.me/+4tUnDFWg4gVlM2Q0",
+    "📊 Si tu veux la lecture complète des matchs ATP du jour, elle est disponible sur Telegram.\nContexte, rythme et points d’attention.\n\nhttps://t.me/+4tUnDFWg4gVlM2Q0"
 ]
