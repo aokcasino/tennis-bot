@@ -1,8 +1,8 @@
 import random
-from datetime import datetime
+import sys
 from requests_oauthlib import OAuth1Session
 
-from content import MATCHDAY, FACTS, SURFACE, ANALYSIS, CTA
+from content import TWEETS_WITH_HASHTAGS
 
 
 API_KEY = "H1EALe1AG9MdN5lRhaGfvr4fp"
@@ -33,62 +33,29 @@ def post_tweet(text: str) -> None:
     response.raise_for_status()
 
 
-def get_day_label() -> str:
-    days = {
-        0: "lundi",
-        1: "mardi",
-        2: "mercredi",
-        3: "jeudi",
-        4: "vendredi",
-        5: "samedi",
-        6: "dimanche",
-    }
-    return days[datetime.now().weekday()]
+def build_tweet() -> str:
+    if not TWEETS_WITH_HASHTAGS:
+        raise ValueError("La liste TWEETS_WITH_HASHTAGS est vide dans content.py")
 
+    tweet = random.choice(TWEETS_WITH_HASHTAGS).strip()
 
-def anti_duplicate_suffix(mode: str = "") -> str:
-    return f" • {mode} • {get_day_label()} {datetime.now().strftime('%d/%m %H:%M')}"
+    if not tweet:
+        raise ValueError("Un tweet vide a été trouvé dans content.py")
 
-
-def build_matchday_tweet() -> str:
-    tweet = f"{random.choice(MATCHDAY)}{anti_duplicate_suffix('matchday')}"
     return tweet[:280]
 
 
-def build_fact_tweet() -> str:
-    tweet = f"{random.choice(FACTS)}{anti_duplicate_suffix('fact')}"
-    return tweet[:280]
-
-
-def build_analysis_tweet() -> str:
-    pool = ANALYSIS + SURFACE
-    tweet = f"{random.choice(pool)}{anti_duplicate_suffix('analysis')}"
-    return tweet[:280]
-
-
-def build_cta_tweet() -> str:
-    tweet = f"{random.choice(CTA)}{anti_duplicate_suffix('cta')}"
-    return tweet[:280]
-
-
-def main(mode: str = "analysis") -> None:
-    if mode == "matchday":
-        tweet = build_matchday_tweet()
-    elif mode == "fact":
-        tweet = build_fact_tweet()
-    elif mode == "analysis":
-        tweet = build_analysis_tweet()
-    elif mode == "cta":
-        tweet = build_cta_tweet()
-    else:
-        tweet = build_analysis_tweet()
-
-    print("Tweet choisi :", tweet)
-    post_tweet(tweet)
+def main() -> None:
+    try:
+        tweet = build_tweet()
+        print("Tweet choisi :")
+        print(tweet)
+        post_tweet(tweet)
+        print("Tweet publié avec succès.")
+    except Exception as e:
+        print(f"Erreur : {e}")
+        raise
 
 
 if __name__ == "__main__":
-    import sys
-
-    mode = sys.argv[1] if len(sys.argv) > 1 else "analysis"
-    main(mode)
+    main()
